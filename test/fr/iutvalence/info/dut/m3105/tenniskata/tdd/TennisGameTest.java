@@ -14,7 +14,7 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void thePlayerWhoServedMakeTheFirstPointTest()
+	public void thePlayerWhoServedScoresFirstTest()
 	{
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.theServerScores();
@@ -23,11 +23,19 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void thePlayerWhoSNotServingScoresTest()
+	public void thePlayerWhoSNotServingScoresFirstTest()
 	{
 		TennisGame tennisGame = new TennisGame();
-		tennisGame.thePlayerWhoSNotServingScores();
+		tennisGame.theReceiverScores();
 		Assert.assertEquals(tennisGame.getScore(), "love - fifteen");
 	}
 	
+	@Test
+	public void aPlayerEgalizesTest()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.theReceiverScores();
+		tennisGame.theServerScores();
+		Assert.assertEquals(tennisGame.getScore(), "fifteen - all");
+	}
 }
