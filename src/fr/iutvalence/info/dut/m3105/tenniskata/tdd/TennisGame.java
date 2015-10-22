@@ -17,4 +17,9 @@ public class TennisGame
 		this.score = "fifteen - love";	
 	}
 
+	public void thePlayerWhoSNotServingScores() {
+		this.score = "love - fifteen";
+		
+	}
+
 }
